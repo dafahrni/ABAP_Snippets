@@ -1,5 +1,5 @@
-# ABAP_Snippets
+# ABAP Snippets
 
-## Coverage Example
+### Coverage Example
 
 ![Alt text](Coverage_Example/Screenshot.png)
