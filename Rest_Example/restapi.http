@@ -1,0 +1,27 @@
+
+
+GET https://airport-info.p.rapidapi.com/airport?iata=VIE
+X-Rapidapi-Key: 53f93e51c1mshd2eed2a7977708ap1ee008jsn460cda7e360e
+X-Rapidapi-Host: airport-info.p.rapidapi.com
+
+###
+
+POST https://aibit-translator.p.rapidapi.com/api/v1/translator/text
+X-Rapidapi-Key: 53f93e51c1mshd2eed2a7977708ap1ee008jsn460cda7e360e
+X-Rapidapi-Host: aibit-translator.p.rapidapi.com
+Content-Type: application/x-www-form-urlencoded
+
+from=de
+&to=en
+&text=Willkommen auf meinem YouTube Kanal
+
+###
+
+POST https://aibit-translator.p.rapidapi.com/api/v1/translator/json
+X-Rapidapi-Key: 53f93e51c1mshd2eed2a7977708ap1ee008jsn460cda7e360e
+X-Rapidapi-Host: aibit-translator.p.rapidapi.com
+Content-Type: application/x-www-form-urlencoded
+
+from=de
+&to=en
+&json={ "title": "Willkommen auf meinem YouTube Kanal", "author": "CustAndCode" }
