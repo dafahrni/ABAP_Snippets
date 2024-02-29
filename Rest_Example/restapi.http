@@ -1,0 +1,42 @@
+
+@RAPIDAPI_KEY = {{$dotenv RAPIDAPI_KEY}}
+@RAPIDAPI_AIRPORT_HOST = airport-info.p.rapidapi.com
+@RAPIDAPI_TRNSLTR_HOST = aibit-translator.p.rapidapi.com
+@CONTENT_TYPE = application/x-www-form-urlencoded
+
+GET https://airport-info.p.rapidapi.com/airport?iata=VIE
+X-Rapidapi-Key: {{RAPIDAPI_KEY}}
+X-Rapidapi-Host: {{RAPIDAPI_AIRPORT_HOST}}
+
+###
+
+POST https://aibit-translator.p.rapidapi.com/api/v1/translator/text
+X-Rapidapi-Key: {{RAPIDAPI_KEY}}
+X-Rapidapi-Host: {{RAPIDAPI_TRNSLTR_HOST}}
+Content-Type: {{CONTENT_TYPE}}
+
+from=de
+&to=en
+&text=Willkommen auf meinem YouTube Kanal
+
+###
+
+POST https://aibit-translator.p.rapidapi.com/api/v1/translator/json
+X-Rapidapi-Key: {{RAPIDAPI_KEY}}
+X-Rapidapi-Host: {{RAPIDAPI_TRNSLTR_HOST}}
+Content-Type: {{CONTENT_TYPE}}
+
+from=de
+&to=en
+&json={ "title": "Willkommen auf meinem YouTube Kanal", "author": "CustAndCode" }
+
+###
+
+curl --request POST \
+	--url https://aibit-translator.p.rapidapi.com/api/v1/translator/text \
+	--header 'X-RapidAPI-Host: {{RAPIDAPI_TRNSLTR_HOST}}' \
+	--header 'X-RapidAPI-Key: {{RAPIDAPI_KEY}}' \
+	--header 'content-type: {{CONTENT_TYPE}}' \
+	--data from=de \
+	--data to=en \
+	--data text=Vogel
